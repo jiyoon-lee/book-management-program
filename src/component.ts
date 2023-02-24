@@ -1,14 +1,14 @@
-export interface Component {
-  attachTo(parent: HTMLElement, position: InsertPosition): void;
-}
-
-export class BaseComponent implements Component {
-  element: HTMLElement;
-  constructor(el: string) {
-    this.element = document.createElement("template");
-    this.element.innerHTML = el;
+export abstract class BaseComponent {
+  props?: {};
+  lastRendered?: HTMLElement;
+  constructor(props: {}) {
+    this.props = props;
   }
-  attachTo(parent: HTMLElement, position: InsertPosition = "beforeend") {
-    parent.insertAdjacentElement(position, this.element);
+  protected abstract render(): void;
+  protected updater() {
+    const rendered = this.render()! as HTMLElement;
+    (this.lastRendered! as HTMLElement).replaceWith(rendered);
+    this.lastRendered = rendered;
   }
+  initialize() {}
 }

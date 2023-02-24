@@ -7,136 +7,14 @@
     <link rel="stylesheet" href="./style/style.css" />
     <script type="module" src="./dist/app.js"></script>
     <title>Book Management Program</title>
+    <script>
+      function inputBookNameChange() {
+        var inputValue = document.getElementById("bookName").value;
+        console.log(inputValue);
+      }
+    </script>
   </head>
   <body>
-    <div class="app">
-      <header class="header">
-        <div class="container">
-          <div class="page-title">
-            <h1>도서 관리<br />프로그램</h1>
-          </div>
-          <div class="add-input-top">
-            <input
-              type="text"
-              class="add-input add-input-title"
-              placeholder="도서 제목"
-            />
-            <select class="add-input add-input-category">
-              <option value="1">소설</option>
-              <option value="1">소설</option>
-              <option value="1">소설</option>
-            </select>
-          </div>
-          <div class="add-input-bottom">
-            <input
-              placeholder="저자"
-              type="text"
-              class="add-input add-input-author"
-            />
-            <input
-              placeholder="발행연도"
-              type="text"
-              class="add-input add-input-publish"
-            />
-          </div>
-          <input class="add-button" type="submit" value="등록" />
-        </div>
-      </header>
-      <main class="main">
-        <nav class="nav">
-          <section>
-            <button class="btn-category">전체</button>
-            <button class="btn-category">소설</button>
-            <button class="btn-category">시/에세이</button>
-            <button class="btn-category">인문</button>
-          </section>
-          <section>
-            <select name="" id="" class="select-book-status">
-              <option value="">전체</option>
-              <option value="">비대여</option>
-            </select>
-            <input
-              type="text"
-              placeholder="도서 제목"
-              class="search-book-name"
-            />
-          </section>
-        </nav>
-        <hr />
-        <ul>
-          <li class="book-item">
-            <div class="book-info">
-              <h2>흔한 남매 과학 탐험대 4.물질</h2>
-              <h3>저자 | 2021</h3>
-            </div>
-            <div class="book-action">
-              <input type="checkbox" id="switch" />
-              <label for="switch" class="switch_label">
-                <span class="onf_btn"></span>
-              </label>
-            </div>
-          </li>
-          <hr />
-          <li class="book-item">
-            <div class="book-info">
-              <h2>흔한 남매 과학 탐험대 4.물질</h2>
-              <h3>저자 | 2021</h3>
-            </div>
-            <div class="book-action">
-              <input type="checkbox" id="switch" />
-              <label for="switch" class="switch_label">
-                <span class="onf_btn"></span>
-              </label>
-            </div>
-          </li>
-          <hr />
-          <li class="book-item">
-            <div class="book-info">
-              <h2>흔한 남매 과학 탐험대 4.물질</h2>
-              <h3>저자 | 2021</h3>
-            </div>
-            <div class="book-action">
-              <input type="checkbox" id="switch" />
-              <label for="switch" class="switch_label">
-                <span class="onf_btn"></span>
-              </label>
-            </div>
-          </li>
-          <hr />
-          <li class="book-item">
-            <div class="book-info">
-              <h2>흔한 남매 과학 탐험대 4.물질</h2>
-              <h3>저자 | 2021</h3>
-            </div>
-            <div class="book-action">
-              <input type="checkbox" id="switch" />
-              <label for="switch" class="switch_label">
-                <span class="onf_btn"></span>
-              </label>
-            </div>
-          </li>
-          <hr />
-          <li class="book-item">
-            <div class="book-info">
-              <h2>흔한 남매 과학 탐험대 4.물질</h2>
-              <h3>저자 | 2021</h3>
-            </div>
-            <div class="book-action">
-              <input type="checkbox" id="switch" />
-              <label for="switch" class="switch_label">
-                <span class="onf_btn"></span>
-              </label>
-            </div>
-          </li>
-        </ul>
-        <hr />
-        <div class="content"></div>
-        <footer class="footer">
-          <button class="btn-navigation">1</button>
-          <button class="btn-navigation">1</button>
-          <button class="btn-navigation">1</button>
-        </footer>
-      </main>
-    </div>
+    <div class="app"> </div>
   </body>
 </html>

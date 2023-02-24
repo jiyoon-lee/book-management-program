@@ -144,54 +144,15 @@ option {
 .book-action {
   position: relative;
 }
-#switch {
-  position: absolute;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+.delete-button {
+  height: 50px;
+  font-size: 2rem;
+  border-radius: 5px;
+  color: #291718;
+  border: 3px solid #291718;
+  background: #ff564a;
+  font-family: "Do Hyeon", sans-serif;
 }
-.switch_label {
-  position: relative;
-  cursor: pointer;
-  display: inline-block;
-  width: 58px;
-  height: 28px;
-  background: #fff;
-  border: 2px solid #daa;
-  border-radius: 20px;
-  transition: 0.2s;
-}
-.switch_label:hover {
-  background: #efefef;
-}
-.onf_btn {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  display: inline-block;
-  width: 19px;
-  height: 19px;
-  border-radius: 20px;
-  background: #daa;
-  transition: 0.2s;
-}
-
-#switch:checked + .switch_label {
-  background: #c44;
-  border: 2px solid #c44;
-}
-
-#switch:checked + .switch_label:hover {
-  background: #e55;
-}
-
-/* move */
-#switch:checked + .switch_label .onf_btn {
-  left: 33px;
-  background: #fff;
-  box-shadow: 1px 2px 3px #00000020;
-}
-
 hr {
   margin: 0;
 }
