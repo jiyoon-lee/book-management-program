@@ -1,7 +1,12 @@
 import { BookType } from "../../type.js";
+import { BaseComponent } from "../../component.js";
 
-class BookItemContainer {
-  constructor(private props: BookType) {}
+type ProsType = {
+  book: BookType;
+  deleteBook: (bookId: number) => void;
+};
+
+class BookItemContainer extends BaseComponent<ProsType> {
   initialize() {
     const bookItem = document.createElement("li");
     bookItem.setAttribute("class", "book-item");
@@ -10,10 +15,11 @@ class BookItemContainer {
     bookInfo.setAttribute("class", "book-info");
 
     const headingTitle = document.createElement("h2");
-    headingTitle.innerText = this.props.title;
+    headingTitle.innerText = this.props.book.title;
 
     const headingAuthor = document.createElement("h3");
-    headingAuthor.innerText = this.props.author;
+    headingAuthor.innerText =
+      this.props.book.author + " | " + this.props.book.publish;
 
     bookInfo.append(headingTitle, headingAuthor);
 
@@ -24,6 +30,10 @@ class BookItemContainer {
     deleteButton.setAttribute("class", "delete-button");
     deleteButton.setAttribute("type", "submit");
     deleteButton.setAttribute("value", "삭제");
+
+    deleteButton.addEventListener("click", () =>
+      this.props.deleteBook(this.props.book.id)
+    );
 
     bookAction.appendChild(deleteButton);
 

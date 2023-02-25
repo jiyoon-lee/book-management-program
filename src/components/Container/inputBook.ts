@@ -1,16 +1,11 @@
-type BookType = {
-  title: string;
-  category: string;
-  author: string;
-  publish: string;
-};
+import { BaseComponent } from "../../component.js";
+import { BookType } from "../../type.js";
 
 type PropsType = {
   addBook: (book: BookType) => void;
 };
 
-export default class InputBook {
-  constructor(private props: PropsType) {}
+export default class InputBook extends BaseComponent<PropsType> {
   initialize() {
     const initializeElement = document.createElement("header");
     initializeElement.setAttribute("class", "header");
@@ -50,7 +45,7 @@ export default class InputBook {
     addInputTop.append(addInputTitle, addInputCategory);
 
     const addInputbottom = document.createElement("div");
-    addInputCategory.setAttribute("class", "add-input-bottom");
+    addInputbottom.setAttribute("class", "add-input-bottom");
 
     const addInputAuthor = document.createElement("input");
     addInputAuthor.setAttribute("placeholder", "저자");
